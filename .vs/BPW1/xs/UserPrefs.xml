@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{D0DB4BA3-EA54-02BB-0BE2-30939DC058F3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MenuButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Unity.gitignore">
     <Files>
       <File FileName="Assets/Scripts/PlayerMovement.cs" Line="128" Column="24" />
-      <File FileName="Assets/Scripts/Timer.cs" Line="28" Column="20" />
-      <File FileName="Assets/Scripts/Restart.cs" Line="14" Column="5" />
-      <File FileName="Assets/FinishTrigger.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/Timer.cs" Line="78" Column="29" />
+      <File FileName="Assets/Scripts/Restart.cs" Line="38" Column="29" />
+      <File FileName="Assets/FinishTrigger.cs" Line="14" Column="9" />
       <File FileName="Assets/StartTrigger.cs" Line="11" Column="42" />
-      <File FileName="Assets/EnviromentMovementLoop.cs" Line="29" Column="56" />
-      <File FileName="Assets/MenuButton.cs" Line="4" Column="18" />
+      <File FileName="Assets/EnviromentMovementLoop.cs" Line="37" Column="44" />
+      <File FileName="Assets/MenuButton.cs" Line="21" Column="32" />
+      <File FileName="Unity.gitignore" Line="71" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
