@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
 
+    private Camera mainCam;
+
     public float speed = 6f;
     public float gravityNorm = -9.81f;
     public float gravity;
@@ -36,18 +38,20 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 movement;
 
     public LayerMask groundChecks;
-   
 
 
-    private void Start()
+    private void Awake()
     {
-       //Cursor.lockState = CursorLockMode.Locked;
+        mainCam = Camera.main;
     }
 
     void Update()
     {
+
         if (canMove)
         {
+
+            WallRun();
 
             if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey("c"))
             {
@@ -63,21 +67,13 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine("Slide");
         }
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundChecks);
-        isWallLeft = Physics.CheckSphere(wallCheckLeft.position, wallDistance, groundChecks);
-        isWallRight = Physics.CheckSphere(wallCheckRight.position, wallDistance, groundChecks);
+       
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -1f;
         }
 
-        if((isWallLeft || isWallRight) && velocity.y < 0)
-        {
-            gravity = -5f;
-        }
-        else
-        {
-            gravity = gravityNorm;
-        }
+
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
         if (canMove)
@@ -114,6 +110,24 @@ public class PlayerMovement : MonoBehaviour
             isSliding = false;
             canMove = true;
         }
+
+    }
+
+
+    private void WallRun()
+    {
+        isWallLeft = Physics.CheckSphere(wallCheckLeft.position, wallDistance, groundChecks);
+        isWallRight = Physics.CheckSphere(wallCheckRight.position, wallDistance, groundChecks);
+
+        if ((isWallLeft || isWallRight) && velocity.y < 0)
+        {
+            gravity = -5f;
+        }
+        else
+        {
+            gravity = gravityNorm;
+        }
+
 
     }
 

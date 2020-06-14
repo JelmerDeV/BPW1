@@ -870,4 +870,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Level1.unity
-  playerPath: /Users/jelmerdev/Downloads/WindowsBuild1/BPW1.exe
+  playerPath: /Users/jelmerdev/Downloads/WindowsBuild_BPW/BPW1.exe
